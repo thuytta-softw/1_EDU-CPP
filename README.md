@@ -1,5 +1,6 @@
 # 1_edu_cpp
-Read Me
+https://guides.github.com/activities/hello-world/
+
 
 
 echo "# 2_Jump_into" >> README.md
