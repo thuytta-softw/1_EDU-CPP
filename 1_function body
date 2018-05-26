@@ -24,7 +24,9 @@ int main()
 }
 
 
-RUN
+
+Output:
+
 abcd: 12
 fff: 2
 qqq: 23
