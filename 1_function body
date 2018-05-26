@@ -10,6 +10,8 @@ FUNCTION(qqq, 23)
  
 #undef FUNCTION
 #define FUNCTION 34
+
+//make OUTPUT factory and use it
 #define OUTPUT(a) std::cout << "output: " #a << '\n'
  
 int main()
