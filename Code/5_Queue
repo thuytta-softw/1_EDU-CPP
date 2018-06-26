@@ -1,0 +1,54 @@
+
+
+Queue
+
+https://www.udemy.com/introduction-to-algorithms-and-data-structures-in-c/learn/v4/t/lecture/6326162?start=0
+
+# include <bits/stdc++.h>
+using namespace std;
+
+int Queue[1000], backInd, frontInd;
+
+void Push(int x) {
+    ++backInd;
+    Queue[backInd] = x;
+}
+void Pop() {
+    Queue[frontInd] = 0;
+    ++frontInd;
+}
+bool isEmpty() {
+    if (backInd < frontInd) return true;
+                       else return false;
+}
+int Front() {
+    return Queue[frontInd];
+}
+
+int BackInt() {
+    return Queue[backInd];
+}
+
+
+int main ()
+{
+    backInd = -1;
+    frontInd = 0;
+
+    Push(5);
+    Push(6);
+    Push(7);
+    cout<<Front()<<endl;
+    cout<<BackInt()<<endl;
+
+    Pop();
+    cout<<Front()<<endl;
+    cout<<BackInt()<<endl;
+
+    cout<<isEmpty()<<endl;
+    Pop();
+    Pop();
+    cout<<isEmpty()<<endl;
+
+    return 0;
+}
