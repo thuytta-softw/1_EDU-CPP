@@ -1,0 +1,71 @@
+
+Sort _ Stack
+
+https://www.udemy.com/introduction-to-algorithms-and-data-structures-in-c/learn/v4/t/lecture/6326160?start=0
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int Stack[100], ind, p_ind;
+
+void push (int x) {
+
+    Stack[ind] = x;
+    ++ind;
+    ++p_ind;
+}
+
+bool isEmpty() {
+    if (p_ind > 0) return false;
+            else  return true;
+}
+
+void pop () {
+    Stack[ind] = 0;
+    --ind;
+    --p_ind;
+}
+
+int top () {
+    return Stack[p_ind];
+}
+int main()
+{
+    ind = 1;
+    p_ind = 0;
+
+    push(2);
+    push(7);
+    push(5);
+
+    cout<<"Befor sort_ "<<endl;
+    for(int i=1; i<=p_ind;++i)
+        cout<< Stack[i] <<" ";
+    cout<<endl;
+
+    cout<<"ind = "<<ind<<endl;
+    cout<<"p_ind = "<<p_ind<<endl;
+    cout<<"top Stack = "<<top()<<endl;
+
+    sort(Stack , Stack + ind );
+
+    cout<<"After sort: "<<endl;
+    for(int i=1; i<=p_ind;++i)
+        cout<< Stack[i] <<" ";
+    cout<<endl;
+
+    cout<<"top Stack = "<<top()<<endl;
+
+        pop();
+        cout<<"After pop = "<<top()<<endl;
+        pop();
+        cout<<"After pop = "<<top()<<endl;
+        pop();
+        cout<<"After pop = "<<top()<<endl;
+
+    if (isEmpty())
+        cout<<"Empty (true=1, false=0) = "<<isEmpty();
+
+
+    return 0;
+}
