@@ -6,10 +6,10 @@
 
 using namespace std;
 
-template <typename T>  // typename = class , template <typename T> = template <class T>
-void addTwoNumber (T first, T second)
+template <typename first, typename second> // typename = class , template <typename T> = template <class T>
+void addTwoNumber (first a, second b)
 {
-  cout<<"Addition is: "<< first + second <<endl;
+  cout<<"Addition is: "<< a + b <<endl;
 }
 
 int main()
@@ -19,3 +19,7 @@ int main()
   addTwoNumber(a,b);
   return 0;
 }
+
+OUTPUT:
+
+Addition is: 30.55
