@@ -11,3 +11,6 @@ The class specifies that each object should have the defined attributes and beha
 Once we've written the class, we can move on to create objects that are based on that class.
 Each object is called an instance of a class. The process of creating objects is called instantiation.
 Each object has its own identity, data, and behavior.
+
+The process of creating objects is called...instattion
+
