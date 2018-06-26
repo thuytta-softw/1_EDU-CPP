@@ -2,11 +2,12 @@
 // addition of two number
 8_template_function
 
+// typename = class , template <typename T> = template <class T>
 #include <iostream>
 
 using namespace std;
 
-template <typename first, typename second> // typename = class , template <typename T> = template <class T>
+template <typename first, typename second> 
 void addTwoNumber (first a, second b)
 {
   cout<<"Addition is: "<< a + b <<endl;
