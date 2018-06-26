@@ -1,0 +1,43 @@
+
+Template
+
+https://www.youtube.com/watch?v=scUUp4-7Cn4&t=39s
+
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+class math{
+    T first;
+    T second;
+public:
+    math(){cout<<"input number, please.";}
+    math(T a, T b){
+        first = a;
+        second = b;
+    }
+    void addNumbers();
+    void multiply();
+};
+
+template <typename T>
+void math<T>::addNumbers()
+{
+    cout<<"Addition of two number is: "<<first + second<<endl;
+}
+
+template <typename T>
+void math<T>::multiply()
+{
+    cout<<"Multiplicatioin of two number is: "<< first * second<<endl;
+}
+
+int main()
+{
+    math<int> obj(10,20);
+    obj.addNumbers();
+    obj.multiply();
+    //cout<<"hello"<<endl;
+    return 0;
+}
