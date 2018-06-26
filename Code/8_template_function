@@ -1,0 +1,21 @@
+
+// addition of two number
+8_template_function
+
+#include <iostream>
+
+using namespace std;
+
+template <typename T>  // typename = class , template <typename T> = template <class T>
+void addTwoNumber (T first, T second)
+{
+  cout<<"Addition is: "<< first + second <<endl;
+}
+
+int main()
+{
+  int a = 10;
+  double b = 20.55;
+  addTwoNumber(a,b);
+  return 0;
+}
