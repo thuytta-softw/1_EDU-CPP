@@ -1,0 +1,32 @@
+
+Pointers vs Arrays
+
+https://www.tutorialspoint.com/cplusplus/cpp_pointers_vs_arrays.htm
+
+#include <iostream>
+
+using namespace std;
+
+
+int main () {
+   int  arr[] = {10, 20, 30,40};
+   int  *p;
+
+   // let us have array address in pointer.
+   p = arr;
+   int size_arr = *(&arr +1) -arr;
+
+   for (int i = 0; i < size_arr; i++) {
+      cout << "Address of var[" << i << "] = ";
+      cout << p << endl;
+
+      cout << "Value of var[" << i << "] = ";
+      cout << *p << endl;
+
+      // point to the next location
+      p++;
+   }
+
+   return 0;
+}
+
