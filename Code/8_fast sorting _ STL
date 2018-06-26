@@ -1,0 +1,45 @@
+
+fast sorting _ STL
+
+https://www.udemy.com/introduction-to-algorithms-and-data-structures-in-c/learn/v4/t/lecture/5405902?start=0
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int arr[] = {2,9,6,4,7}, ind, p_ind;
+
+// compare reverse
+bool cmp_f (int x, int y) {
+    return x>y;
+}
+
+// compare forward
+bool cmp_r (int x, int y) {
+    return x<y;
+}
+
+int main()
+{
+    int s = *(&arr + 1) - arr;
+
+    cout<<"Befor sort_ "<<endl;
+    for(int i=0; i<s;++i)
+        cout<< arr[i] <<" ";
+    cout<<endl;
+
+    // sort reverse
+    sort(arr + 0 , arr + s , cmp_f);
+    cout<<"After sort reverse : "<<endl;
+    for(int i=0; i<s;++i)
+        cout<< arr[i] <<" ";
+    cout<<endl;
+
+    // sort forward
+    sort(arr + 0 , arr + s , cmp_r);
+    cout<<"After sort forward : "<<endl;
+    for(int i=0; i<s;++i)
+        cout<< arr[i] <<" ";
+    cout<<endl;
+
+    return 0;
+}
