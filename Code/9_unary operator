@@ -1,1 +1,47 @@
-sdfasdf
+
+https://www.youtube.com/watch?v=jcn70G4YhPw
+
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+class demo
+{
+    T x;
+public:
+    demo(){ cout<<"Negative number: \n";};
+    demo(T a){ x = a;};
+    void getdata(T a);
+    void display();
+    void operator -();
+    void operator +();
+};
+
+template <typename T>
+void demo<T>::getdata(T a)
+{
+    x=a;
+}
+
+template <typename T>
+void demo<T>::display()
+{
+    cout<<x<<endl;
+}
+
+template <typename T>
+void demo<T>::operator-()
+{
+    x = -x;
+}
+
+int main()
+{
+    demo<int> obj1(10);
+//    obj1.getdata(10);
+    obj1.display();
+    -obj1;
+    obj1.display();
+    return 0;
+}
