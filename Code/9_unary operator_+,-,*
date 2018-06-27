@@ -1,55 +1,59 @@
 
+// +, -, *, /, oporater
 
 #include <iostream>
 
 using namespace std;
 
 template <typename T>
-class demo
+class Multiply
 {
     T x;
 public:
-    demo(){}
+    Multiply(){}
     //demo(T a){ x = a;}
-    demo(T v): x(v){}
+    Multiply(T v): x(v){}
 
     void setdata(T a);
     void display();
-    demo operator +(demo c);
+    Multiply operator *(Multiply c);
     //void operator +();
 };
 
 template <typename T>
-void demo<T>::setdata(T a)
+void Multiply<T>::setdata(T a)
 {
     x=a;
 }
 
 template <typename T>
-void demo<T>::display()
+void Multiply<T>::display()
 {
     cout<<x<<endl;
 }
 
 template <typename T>
-demo<T> demo<T>::operator+(demo<T> c)
+Multiply<T> Multiply<T>::operator*(Multiply<T> c)
 {
-    demo temp;
-    temp.x = x + c.x;
+    Multiply temp;
+    temp.x = x * c.x;
     return temp;
 }
 
 int main()
 {
-    demo<int> obj1,obj2, obj3;
+    Multiply<int> obj1,obj2, obj3;
+
     obj1.setdata(5);
     obj2.setdata(20);
 
     obj1.display();
     obj2.display();
 
-    obj3 = obj1 + obj2;
+    obj3 = obj1 * obj2;
     obj3.display();
 
     return 0;
+}
+
 }
