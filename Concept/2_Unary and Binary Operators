@@ -1,0 +1,16 @@
+
+https://docs.oracle.com/cd/F49540_01/DOC/server.815/a67779/operator.htm#997667
+https://www.includehelp.com/c-programming-questions/what-is-the-difference-between-unary-and-binary-operators.aspx
+
+Unary and Binary Operators
+The two general classes of operators are:
+
+unary  
+A unary operator operates on only one operand. A unary operator typically appears with its operand in this format:  
+operator operand  
+
+binary  
+A binary operator operates on two operands. A binary operator appears with its operands in this format:  
+operand1 operator operand2  
+
+Other operators with special formats accept more than two operands. If an operator is given a null operand, the result is always null. The only operator that does not follow this rule is concatenation (||).
