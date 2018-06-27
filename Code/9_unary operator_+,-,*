@@ -44,8 +44,8 @@ int main()
 {
     Multiply<int> obj1,obj2, obj3;
 
-    obj1.setdata(5);
-    obj2.setdata(20);
+    obj1.setdata(20);
+    obj2.setdata(5);
 
     obj1.display();
     obj2.display();
@@ -54,6 +54,4 @@ int main()
     obj3.display();
 
     return 0;
-}
-
 }
