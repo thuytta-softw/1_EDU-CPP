@@ -27,7 +27,7 @@ void demo<T>::getdata(T a)
 template <typename T>
 void demo<T>::display()
 {
-    cout<<x<<endl;
+    cout<< x <<endl;
 }
 
 template <typename T>
@@ -39,10 +39,13 @@ void demo<T>::operator-()
 int main()
 {
     demo<int> obj1();
+    
     obj1.getdata(10);
+    
     obj1.display();
     -obj1;
     obj1.display();
+    
     return 0;
 }
 
@@ -57,10 +60,13 @@ use class contstructor to get data
 int main()
 {
     demo<int> obj1(10);
+    
     //obj1.getdata(10);
+    
     obj1.display();
     -obj1;
     obj1.display();
+    
     return 0;
 }
 
