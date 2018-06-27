@@ -42,7 +42,7 @@ int main()
 {
     demo<int> obj1();
     
-    obj1.getdata(10);
+    obj1.getdata(10); //funtion overload
     
     obj1.display();
     -obj1;
@@ -63,7 +63,7 @@ Negative number:
 use class contstructor to get data
 int main()
 {
-    demo<int> obj1(10);
+    demo<int> obj1(10); // constructor
     
     //obj1.getdata(10);
     
