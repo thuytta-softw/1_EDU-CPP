@@ -38,10 +38,39 @@ void demo<T>::operator-()
 
 int main()
 {
-    demo<int> obj1(10);
-//    obj1.getdata(10);
+    demo<int> obj1();
+    obj1.getdata(10);
     obj1.display();
     -obj1;
     obj1.display();
     return 0;
 }
+
+OUTPUT:
+
+Negative number:
+10
+-10
+
+/*
+use class contstructor to get data
+int main()
+{
+    demo<int> obj1(10);
+    //obj1.getdata(10);
+    obj1.display();
+    -obj1;
+    obj1.display();
+    return 0;
+}
+
+OUTPUT:
+
+10
+-10
+
+// the sentence "Negative number:" will not appear because we not call constructor demo(), we call constructor demo(T a) to pass a value by parameter.
+
+*/
+
+
