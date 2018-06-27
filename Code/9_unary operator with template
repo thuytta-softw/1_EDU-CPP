@@ -57,6 +57,8 @@ Negative number:
 10
 -10
 
+
+
 /*
 use class contstructor to get data
 int main()
