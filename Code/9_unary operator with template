@@ -12,12 +12,12 @@ class demo
 {
     T x;
 public:
-    demo(){ cout<<"Negative number: \n";};
-    demo(T a){ x = a;};
+    demo() { cout<<"Negative number: \n";}
+    demo(T a) { x = a;} // demo(T v): x(v) {}
+    
     void getdata(T a);
     void display();
     void operator -();
-    void operator +();
 };
 
 template <typename T>
@@ -33,7 +33,7 @@ void demo<T>::display()
 }
 
 template <typename T>
-void demo<T>::operator-()
+void demo<T>::operator -()
 {
     x = -x;
 }
