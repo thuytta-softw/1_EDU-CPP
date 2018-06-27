@@ -15,13 +15,13 @@ public:
     demo() { cout<<"Negative number: \n";}
     demo(T a) { x = a;} // demo(T v): x(v) {}
     
-    void getdata(T a);
+    void setdata(T a);
     void display();
     void operator -();
 };
 
 template <typename T>
-void demo<T>::getdata(T a)
+void demo<T>::setdata(T a)
 {
     x=a;
 }
@@ -42,7 +42,7 @@ int main()
 {
     demo<int> obj1();
     
-    obj1.getdata(10); //funtion overload
+    obj1.setdata(10); //funtion overload
     
     obj1.display();
     -obj1;
@@ -65,7 +65,7 @@ int main()
 {
     demo<int> obj1(10); // constructor
     
-    //obj1.getdata(10);
+    //obj1.setdata(10);
     
     obj1.display();
     -obj1;
