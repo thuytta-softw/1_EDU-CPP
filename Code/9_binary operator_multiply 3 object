@@ -22,7 +22,7 @@ public:
         this->breadth = b;
         this->height = h;
     }
-    //Box(T v): x(v){}
+    //Box(first l, second b, third h): lenghth(l), breadth(b), height(h){}
 
     void setdata(first l, second b, third h);
     void display();
