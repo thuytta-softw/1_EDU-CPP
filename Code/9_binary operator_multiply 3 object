@@ -1,0 +1,74 @@
+
+//multiply 3 object
+
+https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm
+
+#include <iostream>
+
+using namespace std;
+
+template <typename first,typename second,typename third>
+class Box
+{
+private:
+    first lenghth; // Length of a box
+    second breadth; // Breadth of a box
+    third height; // Height of a box
+public:
+    Box(){}
+    Box(first l, second b, third h)
+    {
+        this->lenghth = l;
+        this->breadth = b;
+        this->height = h;
+    }
+    //Box(T v): x(v){}
+
+    void setdata(first l, second b, third h);
+    void display();
+    Box operator *(Box c);
+
+};
+
+template <typename first,typename second,typename third>
+void Box<first,second,third>::setdata(first a, second b, third c)
+{
+    lenghth = a;
+    breadth = b;
+    height = c;
+}
+
+template <typename first,typename second,typename third>
+void Box<first,second,third>::display()
+{
+    cout<<"lenghth = "<<lenghth<<" breadth = "<<breadth<<" height = "<<height<<endl;
+}
+
+template <typename first,typename second,typename third>
+Box<first,second,third> Box<first,second,third>::operator *(Box<first,second,third> c)
+{
+    Box<first,second,third> temp;
+    temp.lenghth = this->lenghth * c.lenghth;
+    temp.breadth = this->breadth * c.breadth;
+    temp.height = this->height * c.height;
+    return temp;
+}
+
+int main()
+{
+    Box<int,int,int> obj1,obj2, obj3;
+
+    obj1.setdata(2,3,4);
+    obj2.setdata(3,4,5);
+
+    obj1.display();
+    obj2.display();
+
+    obj3 = obj1 * obj2;
+    obj3.display();
+
+    return 0;
+}
+
+
+
