@@ -58,8 +58,8 @@ int main()
 {
     Box<int,int,int> obj1,obj2, obj3;
 
-    obj1.setdata(2,3,4);
-    obj2.setdata(3,4,5);
+    obj1.setdata(3,4,5);
+    obj2.setdata(2,3,4);
 
     obj1.display();
     obj2.display();
@@ -69,6 +69,11 @@ int main()
 
     return 0;
 }
+
+OUTPUT:
+lenghth = 3 breadth = 4 height = 5
+lenghth = 2 breadth = 3 height = 4
+lenghth = 6 breadth = 12 height = 20
 
 
 
