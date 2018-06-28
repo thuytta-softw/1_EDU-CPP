@@ -1,0 +1,83 @@
+
+// Multiply & addition 2 object
+
+#include <iostream>
+
+using namespace std;
+
+template <typename first,typename second>
+class Multiply
+{
+private:
+    first num1; // number 1
+    second num2; // number 2
+
+public:
+    Multiply(){}
+    Multiply(first n1): num1(n1){}
+    Multiply(first n1, second n2): num1(n1), num2(n2){}
+
+    void setdata(first n1, second n2);
+    void display();
+    Multiply operator *(Multiply c);
+    Multiply operator +(Multiply c);
+
+};
+
+template <typename first,typename second>
+void Multiply<first,second>::setdata(first a, second b)
+{
+    num1 = a;
+    num2 = b;
+}
+
+template <typename first,typename second>
+void Multiply<first,second>::display()
+{
+    cout<<"number 1 = "<<num1<<" number 2 = "<<num2<<endl;
+}
+
+template <typename first,typename second>
+Multiply<first,second> Multiply<first,second>::operator *(Multiply<first,second> c)
+{
+    Multiply<first,second> temp;
+    temp.num1 = this->num1 * c.num1;
+    temp.num2 = this->num2 * c.num2;
+    return temp;
+}
+
+template <typename first,typename second>
+Multiply<first,second> Multiply<first,second>::operator +(Multiply<first,second> c)
+{
+    Multiply<first,second> temp;
+    temp.num1 = this->num1 + c.num1;
+    temp.num2 = this->num2 + c.num2;
+    return temp;
+}
+
+int main()
+{
+    Multiply<double,double> obj1,obj2, obj3, obj4;
+
+
+    obj1.setdata(3,4);
+    obj2.setdata(2,3);
+
+    cout<<"Object 3 = Object 1 * Object 2. "<<endl;
+    obj1.display();
+    obj2.display();
+
+    obj3 = obj1 * obj2;
+    obj3.display();
+
+    cout<<endl;
+    cout<<"Object 4 = Object 3 + Object 2. "<<endl;
+    obj3.display();
+    obj2.display();
+
+    obj4 = obj3 + obj2;
+    obj4.display();
+
+    return 0;
+}
+
