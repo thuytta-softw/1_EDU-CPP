@@ -11,6 +11,7 @@ int main()
 
     auto lambPassByReference = [&i, &g](int a, int b) -> int
     //auto lambPassByReference = [&](int a, int b) -> int // [&] the same as [&i, &g]
+    // we can mix [i, &g] or [&i, g] or [=, i] or [g, &] or [=, &g] or [&i, =]
     {
         i = 20;
         g = 30;
