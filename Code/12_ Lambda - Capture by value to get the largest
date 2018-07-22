@@ -1,0 +1,23 @@
+
+https://www.youtube.com/watch?v=uk0Ytomv0wY&t=173s
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10, b =20 , c = 15;
+
+    auto theLargest = [=] () -> int {
+
+        if (a< b)
+            return (b<c)? c : b;
+      return (a<c)? c : a;
+    };
+
+    cout << "The largest number is : "<< theLargest()<<endl;
+
+    return 0;
+}
+
+=> The largest number is: 20
