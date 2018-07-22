@@ -9,12 +9,16 @@ int main()
 {
     int i = 10, g =20;
 
-    auto lambPassByValue = [i, g](int a, int b) -> int
+    auto lambPassByReference = [&i, &g](int a, int b) -> int
     {
+        i = 20;
+        g = 30;
         return a + b + i+ g;
     };
 
-    cout << lambPassByValue(30,25)<<endl;
+    cout << lambPassByReference(30,25)<<endl;
 
     return 0;
 }
+
+=> 105
