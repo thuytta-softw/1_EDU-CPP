@@ -9,7 +9,7 @@ int main()
 {
     int i = 10, g =20;
 
-    auto lambPassByValue = [](int a, int b) -> int
+    auto lambPassByValue = [i, g](int a, int b) -> int
     {
         return a + b + i+ g;
     };
