@@ -10,6 +10,7 @@ int main()
     int i = 10, g =20;
 
     auto lambPassByReference = [&i, &g](int a, int b) -> int
+    //auto lambPassByReference = [&](int a, int b) -> int // [&] the same as [&i, &g]
     {
         i = 20;
         g = 30;
@@ -17,6 +18,7 @@ int main()
     };
 
     cout << lambPassByReference(30,25)<<endl;
+    cout << i << " \t " << g;
 
     return 0;
 }
