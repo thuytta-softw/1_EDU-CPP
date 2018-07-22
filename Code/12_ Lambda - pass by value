@@ -1,0 +1,21 @@
+
+https://www.youtube.com/watch?v=uk0Ytomv0wY&t=173s
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int i = 10, g =20;
+
+	auto lambPassByValue = [](int a, int b) -> int
+	{
+	    return a + b + i+ g;
+  };
+
+	cout << sayHelloWorld(30,25)<<endl;
+
+	return 0;
+}
+
+=> 85
