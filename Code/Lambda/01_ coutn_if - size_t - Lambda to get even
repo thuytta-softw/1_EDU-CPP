@@ -17,12 +17,12 @@ int main()
 
     size_t c;
 
-    c = count_if( vec.begin(), vec.end(), [](int x){ return x%2; } );
+    c = count_if( vec.begin(), vec.end(), [](int x){ return !(x % 2); } );
 
-    cout<<"Integers that are odd: "<<c<<endl;
+    cout<<"Integers that are even: "<<c<<endl;
     return 0;
 }
 
-=> 4
+=> Interger that are even : 5
 
-explain: all (2,4,6,8) % 2 = 0
+
