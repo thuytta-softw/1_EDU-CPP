@@ -33,4 +33,4 @@ int main()
 
 => Integers that are odd: 4
 
-explain: all (2,4,6,8) % 2 = 0
+explain: all (2,4,6,8) % 2 = 0 (true = 0)
