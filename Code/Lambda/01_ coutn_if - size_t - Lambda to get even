@@ -17,8 +17,9 @@ int main()
 
     size_t c;
 
-    c = count_if( vec.begin(), vec.end(), [](int x){ return !(x % 2); } );
-
+    // from begin to end of vec, if lambda true then count 
+    c = count_if( vec.begin(), vec.end(), [](int x){ return (x % 2) == 0; } ); 
+    
     cout<<"Integers that are even: "<<c<<endl;
     return 0;
 }
