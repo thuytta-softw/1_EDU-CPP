@@ -21,11 +21,11 @@ struct s_isOdd
 
 int main()
 {
-    vector <int> vec = {1,2,3,4,5,6,7,8};
+    vector <int> vec = {2,4,6,7};
 
     size_t c;
 
-    c = count_if( vec.begin(), vec.end(), s_isOdd() ); // from begin to end of vec, if s_isOdd() then count (functor s_isOdd)
+    c = count_if( vec.begin(), vec.end(), s_isOdd() ); // from begin to end of vec, if s_isOdd() false then count (functor s_isOdd)
 
     cout<<"Integers that are odd: "<<c<<endl;
     return 0;
@@ -33,4 +33,4 @@ int main()
 
 => Integers that are odd: 4
 
-explain: all (2,4,6,8) % 2 = 0 (true = 0)
+explain: 7 % 2 = 1 (false = 1)
