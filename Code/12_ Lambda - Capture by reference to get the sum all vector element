@@ -1,0 +1,20 @@
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    vector <int> arr = {1,2,3,4,5};
+
+    double total = 0;
+
+    for_each( begin(arr), end(arr),[&](int x){ total += x;} ); // for_each pass arr{1,2,3,4,5} throught x integer
+
+    cout<<"sum is : "<<total<<endl;
+    return 0;
+}
+
+=> Sum is : 15
