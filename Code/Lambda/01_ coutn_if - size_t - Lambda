@@ -13,12 +13,16 @@ using namespace std;
 
 int main()
 {
-    vector <int> vec = {1,2,3,4,5,6,7,8};
+    vector <int> vec = {1,2,3,4,5,6,7,8,9};
 
     size_t c;
 
-    c = count_if( vec.begin(), vec.end(),  ); 
+    c = count_if( vec.begin(), vec.end(), [](int x){ return x%2; } );
 
     cout<<"Integers that are odd: "<<c<<endl;
     return 0;
 }
+
+=> 4
+
+explain: all (2,4,6,8) % 2 = 0
