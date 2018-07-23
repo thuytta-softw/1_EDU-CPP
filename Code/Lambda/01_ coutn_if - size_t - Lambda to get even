@@ -25,4 +25,4 @@ int main()
 
 => Interger that are even : 5
 
-explain: all (1,3,5,7,9) % 2 = 1
+explain: all (1,3,5,7,9) % 2 = 1 (false = 1)
