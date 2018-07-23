@@ -1,1 +1,24 @@
-1_EDU-CPP/Code/12_ Lambda - pass by value 
+
+C++ 11 Lambda Functions
+https://www.youtube.com/watch?v=uk0Ytomv0wY&t=173s
+Youtube channel: What's a Creel?
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int i = 10, g =20;
+
+	auto lambPassByValue = [i, g](int a, int b) -> int
+	//auto lambPassByValue = [=](int a, int b) -> int // [=] the same [i,g]
+	{
+	    return a + b + i+ g;
+ 	};
+
+	cout << lambPassByValue(30,25)<<endl;
+
+	return 0;
+}
+
+=> 85
