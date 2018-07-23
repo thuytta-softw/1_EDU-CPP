@@ -30,3 +30,7 @@ int main()
     cout<<"Integers that are odd: "<<c<<endl;
     return 0;
 }
+
+=> Integers that are odd: 4
+
+explain: all (2,4,6,8) % 2 = 0
