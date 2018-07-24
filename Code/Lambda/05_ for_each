@@ -1,0 +1,26 @@
+
+C++ 11 Lambda Functions
+https://www.youtube.com/watch?v=uk0Ytomv0wY&t=173s
+Channel : What's a Creel?
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    // include <vector> for vector
+    vector <int> arr = {1,2,3,4,5};
+
+    double total = 0;
+
+    // include <algorithm> for for_each
+    for_each( begin(arr), end(arr),[&](int x){ total += x;} ); // for_each pass arr{1,2,3,4,5} throught x integer
+
+    cout<<"sum is : "<<total<<endl;
+    return 0;
+}
+
+=> Sum is : 15
