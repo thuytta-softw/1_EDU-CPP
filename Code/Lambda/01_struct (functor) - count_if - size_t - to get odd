@@ -15,7 +15,7 @@ struct s_isOdd
 {
     bool operator() (int x)
     {
-        return x % 2; // => return true = 1, return false = 0
+        return x % 2; // => return true = 1, return false = 0, return (x % 2) == 1
     }
 };
 
