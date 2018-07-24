@@ -15,7 +15,7 @@ struct s_isOdd
 {
     bool operator() (int x)
     {
-        return x % 2;
+        return x % 2; // => return true = 1, return false = 0
     }
 };
 
@@ -25,12 +25,14 @@ int main()
 
     size_t c;
 
-    c = count_if( vec.begin(), vec.end(), s_isOdd() ); // from begin to end of vec, if s_isOdd() false then count (functor s_isOdd)
-
+    // from begin to end of vec, if s_isOdd() true then count (functor s_isOdd)
+    // 7 % 2 == 1 == true == Odd (if vector element = 7)
+    c = count_if( vec.begin(), vec.end(), s_isOdd() ); 
+    
     cout<<"Integers that are odd: "<<c<<endl;
     return 0;
 }
 
 => Integers that are odd: 1
 
-explain: 7 % 2 = 1 (false = 1)
+explain: 7 % 2 = 1 (TRUE = 1)
