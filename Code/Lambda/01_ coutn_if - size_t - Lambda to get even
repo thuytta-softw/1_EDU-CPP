@@ -17,8 +17,10 @@ int main()
 
     size_t c;
 
-    // from begin to end of vec, if lambda true then count 
-    c = count_if( vec.begin(), vec.end(), [](int x){ return (x % 2) == 0; } ); 
+    // from begin to end of vec, to be even then if lambda == 0 then count 
+    // (2,4,6) % 2 == 0 == False == even (if vector element = 2,4,6)
+    //c = count_if( vec.begin(), vec.end(), [](int x){ return (x % 2) == 0; } ); 
+    c = count_if( vec.begin(), vec.end(), [](int x){ return !(x % 2); } ); 
     
     cout<<"Integers that are even: "<<c<<endl;
     return 0;
@@ -26,4 +28,4 @@ int main()
 
 => Interger that are even : 3
 
-explain: all (2,4,6) % 2 = 0 (true = 0)
+explain: all (2,4,6) % 2 = 0 (FALSE = 0)
