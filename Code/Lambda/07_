@@ -1,0 +1,23 @@
+
+
+#include <iostream>
+#include <vector>     // vector
+#include <algorithm> // count_if, for_each
+
+using namespace std;
+
+
+int main()
+{
+    vector <int> vec = {2,4,6,7,9};
+
+    size_t c;
+    int mul = 2;
+
+    c = count_if( vec.begin(), vec.end(), [mul](int x){ return !(x % mul); }  );
+
+    cout<<"Integers that are multiple of " << mul <<" is : "<<c<<endl;
+    return 0;
+}
+
+=> Integers that are multiple of 2 is: 3
