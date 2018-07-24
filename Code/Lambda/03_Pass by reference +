@@ -1,0 +1,29 @@
+
+//https://www.youtube.com/watch?v=uk0Ytomv0wY&t=173s
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 10, g =20;
+
+    auto lambPassByReference = [&i, &g](int a, int b) -> int
+    //auto lambPassByReference = [&](int a, int b) -> int // [&] the same as [&i, &g]
+    // we can mix [i, &g] or [&i, g] or [=, i] or [g, &] or [=, &g] or [&i, =]
+    {
+        i = 20;
+        g = 30;
+        return a + b + i+ g;
+    };
+
+    cout << lambPassByReference(30,25)<<endl;
+    cout << i << " \t " << g;
+
+    return 0;
+}
+
+=> 105
+   20   30
+   
