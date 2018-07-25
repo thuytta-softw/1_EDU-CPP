@@ -1,0 +1,37 @@
+/*
+C++ - lambda expressions
+https://www.youtube.com/watch?v=5t-_wI7nFdU&t=96s
+youtube channel: Bradley Needham
+*/
+
+#include <iostream>
+#include <vector>     // vector
+#include <algorithm> // count_if, for_each
+
+using namespace std;
+
+class c_sumUp
+{
+    int &m_sum;
+public:
+    c_sumUp(int &sum): m_sum(sum){}
+    void operator()(int x)
+    {
+        m_sum += x;
+    }
+};
+
+int main()
+{
+    vector <int> vec = {2,4,6,7,9};
+
+    int sum = 0;
+
+    for_each( vec.begin(), vec.end(), c_sumUp(sum));
+
+    cout<<"Integers that are multiple of is : "<<sum<<endl;
+    return 0;
+}
+
+=> 28
+
