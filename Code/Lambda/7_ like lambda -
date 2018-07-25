@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+#include <vector>     // vector
+#include <algorithm> // count_if, for_each
+
+using namespace std;
+
+class c_isMultipleOf
+{
+    int m_multi;
+public:
+    c_isMultipleOf(int mul) : m_multi(mul) {}
+    bool operator () (int x)
+    {
+        return !(x % m_multi);
+    }
+};
+
+int main()
+{
+    vector <int> vec = {2,4,6,7,9};
+
+    size_t c;
+    int mul = 2;
+
+    c = count_if( vec.begin(), vec.end(), c_isMultipleOf(mul));// [mul](int x){ return !(x % mul); }  );
+
+    cout<<"Integers that are multiple of " << mul <<" is : "<<c<<endl;
+    return 0;
+}
