@@ -29,9 +29,9 @@ int main()
 
     for_each( vec.begin(), vec.end(), c_sumUp(sum));
 
-    cout<<"Integers that are multiple of is : "<<sum<<endl;
+    cout<<"Sum is : "<<sum<<endl;
     return 0;
 }
 
-=> 28
+=> Sum is : 28
 
