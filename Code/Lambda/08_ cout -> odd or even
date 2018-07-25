@@ -1,0 +1,30 @@
+
+/*
+C++ - lambda expressions
+https://www.youtube.com/watch?v=5t-_wI7nFdU&t=96s
+Youtube channel: Bradley Needham
+*/
+
+#include <iostream>
+#include <vector>     // vector
+#include <algorithm> // count_if, for_each
+
+using namespace std;
+
+int main()
+{
+    vector <int> vec = {2,4,6,7,9};
+
+    size_t c;
+
+    c = count_if( vec.begin(), vec.end(),
+                 [](int x) {
+                                bool odd = x % 2;
+                                cout<< x <<" is: "<<(odd ? "odd": "even")<<endl;
+                                return odd;
+                           }
+                  );
+
+    cout<<"Number of odd integers is : "<< c <<endl;
+    return 0;
+}
