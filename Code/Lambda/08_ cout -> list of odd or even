@@ -6,9 +6,9 @@
 using namespace std;
 
 template <class T>
-int odd (T &vec)
+int odd (T & v)
 {
-    return count_if( vec.begin(), vec.end(),
+    return count_if( v.begin(), v.end(),
                  [](int x) {
                                 bool odd = x % 2;
                                 cout<< x <<" is: "<<(odd ? "odd": "even")<<endl;
