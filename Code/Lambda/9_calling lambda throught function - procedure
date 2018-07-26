@@ -1,0 +1,56 @@
+/*Thuy Ta*/
+
+#include <iostream>
+#include <vector>     // vector
+#include <algorithm> // count_if, for_each
+
+using namespace std;
+
+template <typename T>
+int odd(const T &vec)
+{
+    return count_if( vec.begin(), vec.end(),
+                 [](int x) {
+                                bool odd = x % 2;
+                                //cout<< x <<" is: "<<(odd ? "odd": "even")<<endl;
+                                return odd;
+                           }
+                  );
+}
+template <typename T>
+int even(const T &vec)
+{
+    return count_if( vec.begin(), vec.end(),
+                 [](int x) {
+                                bool odd = !(x % 2);
+                                //cout<< x <<" is: "<<(odd ? "odd": "even")<<endl;
+                                return odd;
+                           }
+                  );
+}
+
+template <typename T>
+void oddOrEven(const T &v)
+{
+    for_each( v.begin(), v.end(),
+                 [](int x) {
+                                bool odd = x % 2;
+                                cout<< x <<" is: "<<(odd ? "odd": "even")<<endl;
+                           }
+                  );
+}
+
+
+int main()
+{
+    vector <int> vec = {2,4,6,7,9};
+
+    size_t o = odd(vec), e = even(vec);
+
+    oddOrEven(vec);
+
+    cout<<"Number of odd integers is : "<< o <<endl;
+    cout<<"Number of even integers is : "<< e <<endl;
+
+    return 0;
+}
