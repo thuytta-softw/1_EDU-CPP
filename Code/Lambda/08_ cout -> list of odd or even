@@ -6,7 +6,7 @@
 using namespace std;
 
 template <class T> // template <typename T>
-int odd (T & v)
+int odd (const T & v)
 {
     return count_if( v.begin(), v.end(),
                  [](int x) {
