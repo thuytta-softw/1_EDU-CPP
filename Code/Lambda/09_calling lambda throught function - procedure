@@ -1,5 +1,6 @@
 /*Thuy Ta*/
 
+
 #include <iostream>
 #include <vector>     // vector
 #include <algorithm> // count_if, for_each
@@ -54,3 +55,19 @@ int main()
 
     return 0;
 }
+
+=>
+
+2 is : even
+
+4 is : even
+
+6 is : even
+
+7 is : odd
+
+9 is : odd
+
+Number of odd integers is : 2
+
+Number of even integers is : 3
