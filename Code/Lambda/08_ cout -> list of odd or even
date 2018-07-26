@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int odd(auto vec)
+template <class T>
+int odd (T &vec)
 {
     return count_if( vec.begin(), vec.end(),
                  [](int x) {
@@ -28,3 +29,10 @@ int main()
     return 0;
 }
 
+=> 
+2 is : even
+4 is : even
+6 is : even
+7 is : odd
+9 is : odd
+Number of odd integers is : 2
