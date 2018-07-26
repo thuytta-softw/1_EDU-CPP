@@ -5,7 +5,7 @@
 
 using namespace std;
 
-template <class T>
+template <class T> // template <typename T>
 int odd (T & v)
 {
     return count_if( v.begin(), v.end(),
