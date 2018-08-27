@@ -1,0 +1,44 @@
+C++ Tutorial 13 - File handling, reading and writing to files
+https://www.youtube.com/watch?v=gUFJW9Bmu-k
+Channel: NVitanovic
+
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+
+    int a,b;
+    ofstream writer("D:\\file1.txt");
+    if(writer.is_open())
+    {
+        writer << "10"<<"\n";
+        writer << "20";
+        cout<<"Writting was succes."<<"\n";
+    }
+    else {
+        cout<<"Writting Error."<<"\n";
+    }
+
+    writer.close();
+
+    ifstream reader("D:\\file1.txt");
+
+    if(reader.is_open())
+    {
+        reader >> a;
+        reader >> b;
+        cout <<a <<", "<<b;
+        cout<<" a + b = " << a+b;
+    }
+    else{
+        cout<<"Reading Error";
+    }
+
+    reader.close();
+
+    return 0;
+}
