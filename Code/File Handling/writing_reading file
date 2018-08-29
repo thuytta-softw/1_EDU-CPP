@@ -42,3 +42,11 @@ int main()
 
     return 0;
 }
+
+/**********
+
+Output: 
+Writting was succes.
+10  20 a + b = 30
+
+*********/
