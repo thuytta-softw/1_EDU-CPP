@@ -15,7 +15,7 @@ int main()
     ofstream writer("D:\\file1.txt");
     if(writer.is_open())
     {
-        writer << "10"<<"\n";
+        writer << "10 \t";
         writer << "20";
         cout<<"Writting was succes."<<"\n";
     }
