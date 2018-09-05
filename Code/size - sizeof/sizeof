@@ -1,0 +1,35 @@
+
+Jamie King - Neumont University
+https://www.youtube.com/watch?v=2fAb6sByV-8&index=14&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6
+
+#include <iostream>
+
+using namespace std;
+
+class Cabinet
+{
+public:
+    float width; // 4bytes
+    float height;// 4bytes
+    float depth;// 4bytes
+};
+
+class Home
+{
+    Cabinet Cabinet1; // 4bytes + 4bytes + 4bytes = 12
+    Cabinet Cabinet2;// 4bytes + 4bytes + 4bytes = 12
+
+};
+int main()
+{
+    Home myHome; // 12 + 12 = 24
+    cout << "Hello world!" << endl;
+    cout<<"sizeof (float) = "<<sizeof(float)<<endl;
+    cout<<"sizeof(myHome) = "<<sizeof(myHome); // output: 24
+    return 0;
+}
+
+output: 
+
+sizeof (float) = 4
+sizeof(myHome) = 24
