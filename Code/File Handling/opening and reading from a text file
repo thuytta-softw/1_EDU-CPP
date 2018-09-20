@@ -1,0 +1,77 @@
+
+https://www.lynda.com/C-tutorials/Opening-reading-from-text-file/724791/774761-4.html
+
+Text.txt  // text file contain information
+TWENTY
+TEN
+FIVE
+THREE
+SIX
+TWELVE
+ZERO
+
+
+// game : guess the secret code to pass the door
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string str;
+    int userGess=0;
+    ifstream reader;
+    reader.open("test.txt"); // open file name: test.txt
+
+    if(!reader.fail()) // if(reader.is_open())
+    {
+        while(reader>>str) // read in file to string s variable
+        {
+            cout<<"this reading is: "<< str<<endl;
+
+            cout<<"what is your answer? : ";
+            cin>>userGess;
+
+            if(userGess == int(str.length())) // make sure str.length() is integer
+                cout<<"Congratulation. \n\n";
+            else
+                cout<<"Sorry try again later. \n\n";
+        }
+    }
+    else cout<<"reading error.";
+    reader.close();
+
+    return 0;
+}
+
+console output:
+
+this reading is: TWENTY
+what is your answer? : 6
+Congratulation.
+
+this reading is: TEN
+what is your answer? : 6
+Sorry try again later.
+
+this reading is: FIVE
+what is your answer? : 4
+Congratulation.
+
+this reading is: THREE
+what is your answer? : 4
+Sorry try again later.
+
+this reading is: SIX
+what is your answer? : 6
+Sorry try again later.
+
+this reading is: TWELVE
+what is your answer? : 6
+Congratulation
+
+this reading is: ZERO
+what is your answer? : 0
+Sorry try again later.
