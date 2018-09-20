@@ -11,7 +11,7 @@ TWELVE
 ZERO
 
 
-// game : guess the secret code to pass the door
+// game : guess the secret code to pass the door -> counting character in the string
 #include <iostream>
 #include <fstream>
 #include <string>
